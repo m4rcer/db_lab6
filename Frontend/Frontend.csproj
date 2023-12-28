@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D096918A-2928-4724-9616-09F21BA8A948}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Frontend</RootNamespace>
+    <AssemblyName>Frontend</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth.Designer.cs">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminBuildings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminBuildings.Designer.cs">
+      <DependentUpon>AdminBuildings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminSchedule.Designer.cs">
+      <DependentUpon>AdminSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminEquipment.Designer.cs">
+      <DependentUpon>AdminEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminBrigades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminBrigades.Designer.cs">
+      <DependentUpon>AdminBrigades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\AdminEmployees.Designer.cs">
+      <DependentUpon>AdminEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateSchedule.Designer.cs">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateSchedule.Designer.cs">
+      <DependentUpon>CreateSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateBuilding.Designer.cs">
+      <DependentUpon>UpdateBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateBuilding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateBuilding.Designer.cs">
+      <DependentUpon>CreateBuilding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateEmployee.Designer.cs">
+      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateBrigade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateBrigade.Designer.cs">
+      <DependentUpon>UpdateBrigade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateBrigade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateBrigade.Designer.cs">
+      <DependentUpon>CreateBrigade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\UpdateEquipment.Designer.cs">
+      <DependentUpon>UpdateEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminForms\CreateEquipment.Designer.cs">
+      <DependentUpon>CreateEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Analyst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Analyst.Designer.cs">
+      <DependentUpon>Analyst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeMain.Designer.cs">
+      <DependentUpon>EmployeeMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForemanMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForemanMain.Designer.cs">
+      <DependentUpon>ForemanMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Brigades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Brigades.Designer.cs">
+      <DependentUpon>Brigades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Buildings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Buildings.Designer.cs">
+      <DependentUpon>Buildings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Equipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Equipment.Designer.cs">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\ForemanCalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\ForemanCalls.Designer.cs">
+      <DependentUpon>ForemanCalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Calls\Calls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Calls\Calls.Designer.cs">
+      <DependentUpon>Calls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Calls\UpdateCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Calls\UpdateCall.Designer.cs">
+      <DependentUpon>UpdateCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Calls\CreateCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Calls\CreateCall.Designer.cs">
+      <DependentUpon>CreateCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnalystMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnalystMain.Designer.cs">
+      <DependentUpon>AnalystMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DispatcherMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DispatcherMain.Designer.cs">
+      <DependentUpon>DispatcherMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Data.cs" />
+    <Compile Include="Helpers\Fetch.cs" />
+    <Compile Include="Models\Analyst\AverageTravelTime.cs" />
+    <Compile Include="Models\Analyst\BrigadesPerCall.cs" />
+    <Compile Include="Models\Analyst\CallDateCount.cs" />
+    <Compile Include="Models\Analyst\CallsCountByBuilding.cs" />
+    <Compile Include="Models\Brigade.cs" />
+    <Compile Include="Models\Building.cs" />
+    <Compile Include="Models\BuildingType.cs" />
+    <Compile Include="Models\Call.cs" />
+    <Compile Include="Models\DTO\BrigadeCreateDto.cs" />
+    <Compile Include="Models\DTO\BrigadeUpdateDto.cs" />
+    <Compile Include="Models\DTO\BuildingCreateDto.cs" />
+    <Compile Include="Models\DTO\BuildingUpdateDto.cs" />
+    <Compile Include="Models\DTO\CallCreateDto.cs" />
+    <Compile Include="Models\DTO\CallUpdateDto.cs" />
+    <Compile Include="Models\DTO\EmployeeCreateDto.cs" />
+    <Compile Include="Models\DTO\EmployeeUpdateDto.cs" />
+    <Compile Include="Models\DTO\EquipmentCreateDto.cs" />
+    <Compile Include="Models\DTO\EquipmentUpdateDto.cs" />
+    <Compile Include="Models\DTO\ScheduleCreateDto.cs" />
+    <Compile Include="Models\DTO\ScheduleUpdateDto.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeSpecialization.cs" />
+    <Compile Include="Models\Equipment.cs" />
+    <Compile Include="Models\EquipmentType.cs" />
+    <Compile Include="Models\FireSystemType.cs" />
+    <Compile Include="Models\ManyToMany\CallsBrigades.cs" />
+    <Compile Include="Models\ManyToMany\CallsBuildings.cs" />
+    <Compile Include="Models\ManyToMany\EquipmentBrigades.cs" />
+    <Compile Include="Models\ManyToMany\FireSystemTypesBuildings.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Auth.resx">
+      <DependentUpon>Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminBuildings.resx">
+      <DependentUpon>AdminBuildings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminSchedule.resx">
+      <DependentUpon>AdminSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminEquipment.resx">
+      <DependentUpon>AdminEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminBrigades.resx">
+      <DependentUpon>AdminBrigades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\AdminEmployees.resx">
+      <DependentUpon>AdminEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UpdateSchedule.resx">
+      <DependentUpon>UpdateSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CreateSchedule.resx">
+      <DependentUpon>CreateSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UpdateBuilding.resx">
+      <DependentUpon>UpdateBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CreateBuilding.resx">
+      <DependentUpon>CreateBuilding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CreateEmployee.resx">
+      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UpdateBrigade.resx">
+      <DependentUpon>UpdateBrigade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CreateBrigade.resx">
+      <DependentUpon>CreateBrigade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\UpdateEquipment.resx">
+      <DependentUpon>UpdateEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminForms\CreateEquipment.resx">
+      <DependentUpon>CreateEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Analyst.resx">
+      <DependentUpon>Analyst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeMain.resx">
+      <DependentUpon>EmployeeMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForemanMain.resx">
+      <DependentUpon>ForemanMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Brigades.resx">
+      <DependentUpon>Brigades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Buildings.resx">
+      <DependentUpon>Buildings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Equipment.resx">
+      <DependentUpon>Equipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\ForemanCalls.resx">
+      <DependentUpon>ForemanCalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Calls\Calls.resx">
+      <DependentUpon>Calls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Calls\UpdateCall.resx">
+      <DependentUpon>UpdateCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Calls\CreateCall.resx">
+      <DependentUpon>CreateCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnalystMain.resx">
+      <DependentUpon>AnalystMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DispatcherMain.resx">
+      <DependentUpon>DispatcherMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
